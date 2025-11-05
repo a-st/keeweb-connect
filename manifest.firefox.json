@@ -1,7 +1,12 @@
 {
   "browser_specific_settings": {
     "gecko": {
-      "id": "keeweb-connect@keeweb.info"
+      "id": "keeweb-connect-extension@keeweb.info",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ]
+      }
     }
   },
   "commands": {
