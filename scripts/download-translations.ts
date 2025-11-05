@@ -3,7 +3,7 @@ import * as crypto from 'crypto';
 import * as fs from 'fs';
 import * as path from 'path';
 
-const keys: { public: string; secret: string } = require('../../keys/onesky.json');
+const keys = JSON.parse(fs.readFileSync('../../keys/onesky.json', 'utf8'));
 
 const USE_FILES = false;
 const PROJECT_ID = '382232';
@@ -74,7 +74,7 @@ async function loadLanguages(): Promise<Languages> {
 
     const url = new URL(API_URL_LANGUAGES.replace(':project_id', PROJECT_ID));
     for (const [key, value] of urlParams) {
-        url.searchParams.set(key, value);
+        url.searchParams.set(key, value as string);
     }
 
     return new Promise((resolve, reject) => {
@@ -98,7 +98,7 @@ async function loadLanguages(): Promise<Languages> {
                     }
                     resolve(parsed);
                 } catch (e) {
-                    reject(e);
+                    reject(new Error(`Error ${e}`));
                 }
             });
         });
@@ -113,7 +113,7 @@ async function loadTranslations(): Promise<Translations> {
     console.log('Loading translations...');
     const url = new URL(API_URL_TRANSLATIONS.replace(':project_id', PROJECT_ID));
     for (const [key, value] of urlParams) {
-        url.searchParams.set(key, value);
+        url.searchParams.set(key, value as string);
     }
     return new Promise((resolve, reject) => {
         https.get(url, (res) => {
@@ -131,7 +131,7 @@ async function loadTranslations(): Promise<Translations> {
                     }
                     resolve(parsed);
                 } catch (e) {
-                    reject(e);
+                    reject(new Error(`Error ${e}`));
                 }
             });
         });
