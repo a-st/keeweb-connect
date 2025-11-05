@@ -30,7 +30,7 @@ jobs:
           done
         working-directory: dist
       - name: Upload artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: extensions
           path: dist/*.zip
@@ -78,12 +78,12 @@ jobs:
         run: zip -r ../../../KeeWeb\ Connect.app.zip KeeWeb\ Connect.app
         working-directory: xcode/dist/archive.xcarchive/Products/Applications
       - name: Upload app artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: KeeWeb Connect.app
           path: xcode/dist/KeeWeb Connect.app.zip
       - name: Upload pkg artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: KeeWeb Connect.pkg
           path: xcode/dist/KeeWeb Connect.pkg
@@ -102,7 +102,7 @@ jobs:
         run: cmake --build build --config MinSizeRel
         working-directory: native-messaging-host
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: native-messaging-host-linux-x64
           path: native-messaging-host/build/keeweb-native-messaging-host
@@ -121,7 +121,7 @@ jobs:
         run: cmake --build build --config MinSizeRel
         working-directory: native-messaging-host
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: native-messaging-host-darwin-x64
           path: native-messaging-host/build/keeweb-native-messaging-host
@@ -140,7 +140,7 @@ jobs:
         run: cmake --build build --config MinSizeRel
         working-directory: native-messaging-host
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: native-messaging-host-darwin-arm64
           path: native-messaging-host/build/keeweb-native-messaging-host
@@ -159,7 +159,7 @@ jobs:
         run: cmake --build build --config MinSizeRel
         working-directory: native-messaging-host
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: native-messaging-host-win32-x64
           path: native-messaging-host/build/MinSizeRel/keeweb-native-messaging-host.exe
@@ -178,7 +178,7 @@ jobs:
         run: cmake --build build --config MinSizeRel
         working-directory: native-messaging-host
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: native-messaging-host-win32-ia32
           path: native-messaging-host/build/MinSizeRel/keeweb-native-messaging-host.exe
@@ -197,7 +197,7 @@ jobs:
         run: cmake --build build --config MinSizeRel
         working-directory: native-messaging-host
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: native-messaging-host-win32-arm64
           path: native-messaging-host/build/MinSizeRel/keeweb-native-messaging-host.exe
