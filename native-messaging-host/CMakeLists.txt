@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.10)
 
 project(keeweb-native-messaging-host)
 
@@ -14,7 +14,7 @@ include(FetchContent)
 FetchContent_Declare(
     libuv
     GIT_REPOSITORY https://github.com/libuv/libuv.git
-    GIT_TAG        v1.41.0
+    GIT_TAG        v1.51.0
 )
 
 FetchContent_MakeAvailable(libuv)
