@@ -1,4 +1,7 @@
 {
+  "background": {
+    "scripts": ["js/background.js"]
+  },
   "browser_specific_settings": {
     "gecko": {
       "id": "keeweb-connect-extension@keeweb.info",
