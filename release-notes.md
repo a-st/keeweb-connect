@@ -1,7 +1,7 @@
 Release notes
 -------------
 
-##### v1.0.0 (TBD)
+##### v1.0.1 (TBD)
 * Add verify workflow and specify node version by @HarlemSquirrel in https://github.com/keeweb/keeweb-connect/pull/53
 * Bump node to 18 by @HarlemSquirrel in https://github.com/keeweb/keeweb-connect/pull/57
 * Ci publish firefox by @HarlemSquirrel in https://github.com/keeweb/keeweb-connect/pull/55
